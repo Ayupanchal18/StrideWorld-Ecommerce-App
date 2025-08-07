@@ -1,12 +1,9 @@
-import express from 'express'
+import express from 'express';
 import dotenv from "dotenv";
 import morgan from 'morgan';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoutes.js'
 import Cors from "cors"
-
-
-
 
 
 dotenv.config();
@@ -27,7 +24,7 @@ app.use('/api/v1/auth', authRoutes);
 // Rest Api
 
 app.get("/", (req, res) => {
-    res.send("<h1> Hello strideworld </h1>")
+    res.send("<h1> This is rendered on PORT 8080 </h1>")
 })
 
 const PORT = process.env.PORT || 8080;
